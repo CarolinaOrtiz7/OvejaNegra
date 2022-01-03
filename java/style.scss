@@ -1,0 +1,426 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+.main-font  {font-family: 'Josefin Sans', sans-serif;}
+
+
+//colors
+$primary-color-black: rgb(0, 0, 0);
+$primary-color-white : #ffffff;
+$secondary-color-grey : #787979;
+$secondary-color-purple :#35032e;
+
+
+
+
+
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    .navbar {
+        font-size: 28px;
+     
+        .container-fluid {
+            padding: 0px 50px;
+            .navbar-brand {
+                .icon-background {
+                    background-color: $primary-color-black;
+                    height: 90px;
+                    width: 100px;
+                    margin-top: -15px;
+                    padding-top: 20px;
+                    border-radius: 0px 0px 5px 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    .icon {
+                        height: 20%;
+                    }
+                    p {
+                        font-size: 1rem;
+                        color: rgb(255, 255, 255);
+                        font-size: bold; 
+                        font-family: 'Paytone One';   
+                        transform: rotate(-5deg);          
+                    }
+                }
+            }
+            .collapse {
+                margin-top: -30px;
+                font-family:'Josefin Sans', sans-serif;
+                .nav-left {
+                    padding-left: 20px;
+                    .nav-item {
+                        padding: 0px 40px;
+                        .nav-link {
+                            color: rgb(255, 255, 255)
+                            ;
+                            font-size: 0.9em;
+                            background-color: $primary-color-black;
+                        border-radius: 5px;
+                        padding: 5px 10px;
+                        border: none;
+                        }
+                    }
+                }
+                .nav-right {
+                    .nav-item {
+                        margin-left: 20px;
+                        .nav-link {
+                            color: rgb(255, 255, 255);
+                           
+                        }
+                    }
+                    #show-cart {
+                        font-size: 1.1rem;
+                        background-color: $secondary-color-purple;
+                        border-radius: 4px;
+                        padding: 5px 10px;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#Productos {
+    padding-top: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    padding-bottom: 1em;
+    position: relative;
+
+    #checkout-container {
+        height: 60vh;
+        width: 70%;
+        background-color: rgb(255, 255, 255);
+        position:fixed;
+        font-size: 15px;
+        display: none;
+        align-items: center;
+        padding: 2em;
+        top: 20%;
+        border: 2px solid rgb(172, 172, 172);
+        border-radius: 0.2em;
+        z-index: 2;
+        box-shadow: 0 0 0 9999px #c0c0c0b0;
+        form {
+            width: 70%;
+        }
+        #close-checkout{
+            color: rgb(109, 109, 109);
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 0.3em;
+        }
+    }
+
+    /* cart*/
+    #cart-container {
+            height: 100vh;
+            width: 30%;
+            position: fixed;
+            font-size: 15px;
+            top: 0;
+            right: 0;
+            background-color: #fafafa;
+            box-shadow: -1px 0px 5px rgb(85, 85, 85);
+            z-index: 1;
+            box-shadow: 0 0 0 9999px #000000b0;
+            padding-top: 5%;
+            display: none;
+            
+        .fa-window-close {
+            color: rgb(0, 0, 0);
+            position: absolute;
+            right: 0;
+            top: -0.1em;
+            z-index: 10;
+            margin: 0.4em;
+            margin-right: 0.5em;;
+        }
+        #cart {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin-bottom: 7vh;
+            padding: 1em;
+            .cartItem-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1em;
+                position: relative;
+                .number {
+                    position: absolute;
+                    bottom: -20px;
+                }
+                .fa-trash {
+                    color: $primary-color-black;
+                    font-size: 0.8em;
+                }
+                .cartItem {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0.5em;
+                    font-size: 1.3em;
+                    width: 100%;
+                    border-radius: 6px;
+                    box-shadow: 0px 0px 4px rgb(134, 134, 134);
+                    .cartItem-right {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            padding-right: 0.6em;
+                        }
+                        .controls {
+                            display: flex;
+                            padding-right: 10px;
+                            color: $secondary-color-grey;
+                            button {
+                                margin-right: 10px;
+                                background: none;
+                                color: inherit;
+	                            border: none;
+	                            padding: 0;
+	                            font: inherit;
+	                            cursor: pointer;
+	                            outline: inherit;
+                            }
+                        }
+                    }
+                    p {
+                        font-size: 0.9em;
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: rgb(0, 0, 0);
+                        margin-bottom: 0px;              
+                    }
+                }
+            }
+        }
+        .totalDiv {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            height: 7vh;
+            max-height: 80px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 1.3em;
+    
+            .totalRight{
+                background-color: rgb(3, 3, 3);
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    margin-bottom: 0px;
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .totalLeft{
+                background-color: rgb(255, 255, 255);
+                width: 50%;
+                border-top: 2px solid rgb(7, 7, 7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    color: none;
+                    border: none;
+                    background-color: white;
+                    p {
+                        margin-bottom: 0px;
+                        color: rgb(0, 0, 0);
+                        font-family: 'Josefin Sans', sans-serif; 
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.photo{
+
+    display:flex;
+    float: left;
+    height: 500px;
+    margin: 50px 350px
+}
+
+    
+#producto-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5%;
+    
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+    }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: none;
+
+            .clothes-image {
+                height: 12rem;
+                width: 10rem;
+                background-image: url("java/clothesItems/Remera.jpg");
+                background-size: 180px;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 300px;
+            }
+            .card-text {
+                font-size: 0.8rem;
+                font-family: 'Josefin Sans', sans-serif;
+                text-align: center;
+                color: $secondary-color-grey;
+            }
+            .card-title {
+               font-family: 'Josefin Sans', sans-serif;
+                padding-top: 15px;
+                font-size: 1.7rem;
+                color:$primary-color-black
+            }
+            
+                button {
+                    font-family: 'Josefin Sans', sans-serif;
+                    text-decoration: none;
+                    background-color: white;
+                    font-size: 1.5rem;
+                    color: $primary-color-black;
+                    border: 2px solid rgb(0, 0, 0);
+                    border-radius: 35px;
+                    padding: 0.7rem;
+                }
+                .price-box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+                        text-align: center;
+                        color: white;
+                        background-color: $primary-color-black;
+                        width: 5rem;
+                        height: 3rem;
+                        border-radius: 10px;
+                        margin: 0!important;
+                        font-size: 1.5rem;
+
+                    }
+                }
+            }
+        }
+    
+
+        footer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            img {
+                position: absolute;
+                bottom: -7em;
+                left: -250px;
+                width: 35em;
+            }
+            .contacto {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                padding: 0 20%;
+                max-width: 1600px;
+                .column-footer {
+                    flex-direction: column;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 0 20px;
+                    width: 5em;
+                    flex: 1;
+                    h3 {
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: $secondary-color-grey;
+                        padding-bottom: 15px;
+                        font-size: 2em
+                    }
+                    p {
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: $primary-color-black;
+                        font-size: 1.1em;
+                    }
+                    a {
+                        text-decoration: none;
+                        padding-top: 15px;
+                        p {
+                            background-color: rgb(252, 252, 252);
+                            color: white;
+                            padding: 5px 40px;
+                            border-radius: 30px;                  
+                        }
+                    }
+                    input {
+                        border: none;
+                    }
+                }
+               
+            }
+            .social {
+        
+            
+            .brand {
+                display: flex;
+                justify-content: space-around;
+                p {
+                    font-family: 'Josefin Sans', sans-serif;
+                    color: $primary-color-black;
+                    padding: 50px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+
+    }
+
+
+
+ 

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Tienda Online de Black Sheep</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/eaf2768634.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Goblin+One&family=Pacifico&family=Paytone+One&display=swap"
+  rel="stylesheet">
+<style>body{background-color:rgb(255, 255, 255);}  h2{text-align:center; font-family: 'Pirata One' ; margin-bottom: 12%;margin-top: 5%;} h5{color: rgb(37, 5, 37);font-family: 'Pirata One';font-size: 40px;} h3{color: rgb(37, 5, 37);font-family: 'Pirata One'}</style>
+
+</head>
+
+<body>
+
+
+
+<nav>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <div class="icon-background">
+          
+          <p>Black Sheep</p>
+        </div>
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav nav-left">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#Productos">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Remeras">Productos</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-right">
+         <li class="nav-item">
+            <button class="nav-link" id="show-cart" href="">Carrito</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</nav>
+
+
+
+  <section id="Productos">
+
+    <div id="checkout-container">
+      <i id="close-checkout" class="fas fa-window-close fa-2x"></i>
+      <form id="form">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Allí te mandaremos la confirmación del pedido.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Nombre</label>
+          <input type="name" class="form-control" id="inputName">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Telefono</label>
+          <input type="name" class="form-control" id="inputPhone">
+        </div>
+        <button id="submitButton" type="submit" class="nav-link" id="show-cart">Pagar</button>
+      </form>
+    </div>
+
+    <div id="cart-container">
+      <i id="close-cart" class="fas fa-window-close fa-2x"></i>
+      <div id="cart">
+        
+      </div>
+
+      <div class="totalDiv">
+        <div class="totalLeft">
+          <button id="checkout">
+            <p>Pagar</p>
+          </button>
+        </div>
+        <div class="totalRight">
+          <p id="total">$0</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="width: 50%;margin-top: 13%;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="diseño3.jfif" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>PROXIMAMENTE</h5>
+            <h3>Nuevos diseños</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="diseño2.jfif" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>PROXIMAMENTE</h5>
+            <h3>Nuevos diseños</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="diseño1.jfif" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>PROXIMAMENTE</h5>
+            <h3>Nuevos diseños</h3>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+
+    </section>
+
+
+  <section id="Remeras">
+    <div id="producto-items">
+      
+     
+
+</section>
+
+
+    <h2 class="inicio">Elige, paga y recibe tu pedido sin moverte de tu casa</h2>
+
+
+    <footer id="contact">
+      <img src="sheepblack.jpg" alt="">
+      <div class="contacto">
+        <div class="column-footer">
+          <h3>Mail us</h3>
+          <p> Blacksheep@gmail.com</p>
+         
+        </div>
+        <div class="column-footer">
+          <h3>About us</h3>
+          
+          <p>Black Sheep es un proyecto que se enfoca en un mensaje claro: todos pueden verse bien con nuestras prendas. 
+            La marca ofrece una gran variedad de talles, frases realmente motivadoras y diseños basados en tendencias que favorecen todos los cuerpos. 
+            Además, al fabricar desde cero nuestras propias prendas,  nos aseguramos de que lo que adquieran nuestros clientes sea unico y de la mejor calidad.</p>
+        </div>
+        <div class="column-footer">
+          <h3>Suscribite</h3>
+          <p>Ingresa tu email:</p>
+          <input type="text">
+          
+            <button id="suscripcion" type="button" class="btn btn-dark">Enviar</button>
+          
+        </div>
+      </div>
+      <div class="social">
+  
+      </div>
+      <div class="brand">
+        <p>© 2021 Black Sheep. All rights reserved.</p>
+        <p>Terms of delivery. Privacy and Policy</p>
+      </div>
+    </footer>
+  
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+    <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  
+
+</body>
+
+
+
